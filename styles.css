@@ -400,3 +400,51 @@ header {
     transform: scale(1.1);
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
+
+
+/* Tech Stack Section */
+.techstack-content {
+    text-align: center;
+    padding: 40px 20px;
+  }
+  
+  .section-title {
+    font-size: 32px;
+    margin-bottom: 10px;
+    color: #ff69b4; /* Pink */
+  }
+  
+  .section-description {
+    font-size: 18px;
+    color: #ccc;
+    margin-bottom: 20px;
+  }
+  
+  /* Tech Stack List */
+  .tech-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); /* Makes it responsive */
+    gap: 20px;
+    justify-items: center;
+    align-items: center;
+    margin-top: 20px;
+  }
+  
+  /* Tech Item */
+  .tech-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .tech-icon {
+    width: 60px; /* Adjust size as needed */
+    height: 60px; /* Adjust size as needed */
+    object-fit: contain;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .tech-icon:hover {
+    transform: scale(1.1); /* Zoom effect on hover */
+  }
+  
