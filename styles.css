@@ -44,6 +44,7 @@ header {
 
 /* Navigation Bar */
 .navbar {
+    font-size: 20px;
     display: flex;
     gap: 20px;
 }
@@ -58,6 +59,9 @@ header {
 .navbar a:hover {
     color: #ff69b4; /* Pink hover effect */
 }
+
+
+
 
 /* Profile Section */
 .profile-section {
@@ -152,6 +156,25 @@ header {
     color: #000;
 }
 
+/*Blog buttton */
+.blog-link {
+    display: inline-block;
+    padding: 12px 20px; /* Bigger padding */
+    font-size: 18px; /* Bigger text */
+    font-weight: 600;
+    text-decoration: none;
+    color: black; /* Text color */
+    background-color: #ff69b4; /* Pink background */
+    border-radius: 8px; /* Rounded corners */
+    transition: 0.3s ease-in-out;
+}
+
+.blog-link:hover {
+    transform: scale(1.1); /* Slight zoom effect */
+    box-shadow: 0 4px 10px rgba(255, 105, 180, 0.5); /* Pink glow */
+}
+
+
 /* Blog Page Styles */
 .blog-container {
     max-width: 800px;
@@ -205,6 +228,7 @@ header {
     }
     .navbar {
         flex-direction: column;
+        justify-content: flex-end;
         gap: 10px;
     }
     .profile-section {
@@ -245,6 +269,43 @@ header {
     text-align: center;
     margin-top: 50px;
 }
+
+.about-box {
+    background: rgba(255, 255, 255, 0.1); /* Transparent effect */
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 600px;
+    width: 90%; /* Adjust width for smaller screens */
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(255, 105, 180, 0.3); /* Pink glow */
+    backdrop-filter: blur(10px); /* Glassmorphism effect */
+    margin-top: 20px;
+    
+    max-height: 300px; /* Set a maximum height */
+    overflow-y: auto; /* Enable vertical scrolling */
+}
+
+/* About Me Paragraph */
+.about-box p {
+    color: #fff; /* White text */
+    font-size: 16px;
+    line-height: 1.6;
+    word-wrap: break-word; /* Prevents text from overflowing */
+}
+
+/* Mobile Optimization */
+@media (max-width: 768px) {
+    .about-box {
+        width: 95%; /* Make it slightly wider on small screens */
+        max-height: 250px; /* Slightly smaller on mobile */
+        padding: 15px; /* Reduce padding */
+    }
+
+    .about-box p {
+        font-size: 14px; /* Adjust text size for better readability */
+    }
+}
+
 
 /* Center the profile section */
 .profile-section {
@@ -389,10 +450,6 @@ header {
 .social-icons a:nth-child(3) { /* LinkedIn */
     background-color: pink;
     color: black;
-}
-.social-icons a:nth-child(4) { /* Facebook */
-    background-color: black;
-    color: pink;
 }
 
 /* Hover effects */
