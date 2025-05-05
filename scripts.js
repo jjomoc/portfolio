@@ -1,4 +1,4 @@
-// Initialize Vanta.js fog effect
+
 window.addEventListener('DOMContentLoaded', function() {
   if (window.VANTA && window.VANTA.FOG) {
     VANTA.FOG({
@@ -8,13 +8,13 @@ window.addEventListener('DOMContentLoaded', function() {
       gyroControls: false,
       minHeight: 200.00,
       minWidth: 200.00,
-      highlightColor: 0xe14ea4, // Pink fog
-      midtoneColor: 0x777777,  // Mid gray
-      lowlightColor: 0x111111, // Dark gray
-      baseColor: 0x000000,     // Black
-      blurFactor: 0.60,        // Increased blur
-      speed: 1.2,              // Slightly faster
-      zoom: 0.70               // Better zoom level
+      highlightColor: 0xe14ea4, 
+      midtoneColor: 0x777777, 
+      lowlightColor: 0x111111, 
+      baseColor: 0x000000,     
+      blurFactor: 0.60,        
+      speed: 1.2,             
+      zoom: 0.70               
     });
   }
 });

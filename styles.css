@@ -14,7 +14,7 @@ body {
 .container {
     max-width: 900px;
     width: 100%;
-    padding: 20px;
+    padding: 50px;
     text-align: center;
     position: relative;
     z-index: 1;
@@ -325,11 +325,7 @@ social-icons img:hover {
 
 /* Mobile Optimization */
 @media (max-width: 768px) {
-    .about-box {
-        width: 95%; /* Make it slightly wider on small screens */
-        max-height: 250px; /* Slightly smaller on mobile */
-        padding: 15px; /* Reduce padding */
-    }
+ 
 
     .about-box p {
         font-size: 14px; /* Adjust text size for better readability */
@@ -724,3 +720,34 @@ social-icons img:hover {
     width: 100%;
     border-radius: 8px;
 }
+
+body {
+    font-family: 'Inter', sans-serif;
+  }
+  
+  .tech-icon {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    margin-bottom: 10px;
+  }
+  
+  .tech-name {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #ffffff;
+  }
+  
+  .tech-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+  
+  .tech-item {
+    text-align: center;
+  }
+  
+  
