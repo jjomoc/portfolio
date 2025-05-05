@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Certifications - Justine Jomoc</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body class="d-flex flex-column min-vh-100">
+    <div id="fog-background"></div>
+    <div class="container">
+        <header>
+            <nav class="navbar navbar-expand-lg navbar-dark bg-transparent fixed-top">
+                <div class="container-fluid">
+                    <a class="navbar-brand logo d-flex align-items-center" href="index.html">
+                        <span class="name ms-2">JJ</span>
+                    </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="mainNavbar">
+                        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                            <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                            <li class="nav-item"><a href="aboutme.html" class="nav-link">About Me</a></li>
+                            <li class="nav-item"><a href="techstack.html" class="nav-link">Tech Stack</a></li>
+                            <li class="nav-item"><a href="contactme.html" class="nav-link">Contact Me</a></li>
+                            <li class="nav-item"><a href="certifications.html" class="nav-link active">Certifications</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <main class="flex-grow-1 d-flex flex-column justify-content-center align-items-center mt-5 pt-5">
+            <h1 class="section-title">Certifications</h1>
+            <div class="row justify-content-center g-4">
+                <div class="col-md-4 mb-4">
+                    <div class="card bg-dark text-white h-100">
+                        <img src="pictures/cert java.png" class="card-img-top cert-image" alt="Java Certification" data-bs-toggle="modal" data-bs-target="#javaModal">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Java Foundation Certification</h5>
+                            <p class="card-text flex-grow-1">Certified in Java programming fundamentals with expertise in OOP concepts and basic algorithms.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card bg-dark text-white h-100">
+                        <img src="pictures/microsoft.jpg" class="card-img-top cert-image" alt="Microsoft Word Certification" data-bs-toggle="modal" data-bs-target="#wordModal">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">MS Word Certification</h5>
+                            <p class="card-text flex-grow-1">Proficient in Microsoft Word with advanced document creation and formatting capabilities.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card bg-dark text-white h-100">
+                        <img src="pictures/powerpoint.jpg" class="card-img-top cert-image" alt="PowerPoint Certification" data-bs-toggle="modal" data-bs-target="#pptModal">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">PowerPoint Certification</h5>
+                            <p class="card-text flex-grow-1">Expert in creating engaging presentations with animations and multimedia integration.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Image Modals -->
+    <div class="modal fade" id="javaModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content bg-dark">
+                <div class="modal-header border-0">
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body p-0">
+                    <img src="pictures/cert java.png" class="img-fluid" alt="Java Certification">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="wordModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content bg-dark">
+                <div class="modal-header border-0">
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body p-0">
+                    <img src="pictures/microsoft.jpg" class="img-fluid" alt="Microsoft Word Certification">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="pptModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content bg-dark">
+                <div class="modal-header border-0">
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body p-0">
+                    <img src="pictures/powerpoint.jpg" class="img-fluid" alt="PowerPoint Certification">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.fog.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="scripts.js"></script>
+</body>
+</html>

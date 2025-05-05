@@ -16,6 +16,8 @@ body {
     width: 100%;
     padding: 20px;
     text-align: center;
+    position: relative;
+    z-index: 1;
 }
 
 /* Header and Navigation */
@@ -60,9 +62,6 @@ header {
     color: #ff69b4; /* Pink hover effect */
 }
 
-
-
-
 /* Profile Section */
 .profile-section {
     display: flex;
@@ -75,17 +74,24 @@ header {
 /* Profile Picture */
 .profile-pic {
     position: relative;
-    width: 150px;
-    height: 150px;
+    width: 180px;
+    height: 180px;
     border-radius: 50%;
     overflow: hidden;
     box-shadow: 5px 5px 15px #ff69b4; /* Pink shadow */
 }
 
 .profile-pic img {
-    width: 100%;
-    height: 100%;
+    width: 180px; /* Increased size for more detail */
+    height: 180px;
+    border-radius: 50%;
     object-fit: cover;
+    object-position: 50% 15%; /* Moved up more to focus on face */
+    display: block;
+    margin: 0 auto;
+    border: 4px solid rgba(255, 105, 180, 0.5);
+    box-shadow: 0 0 20px rgba(255, 105, 180, 0.3);
+    transform: scale(1.3); /* Increased zoom while keeping container size same */
 }
 
 /* Info Section */
@@ -112,7 +118,6 @@ header {
 }
 
 /* Social Icons */
-/* Social Icons */
 .social-icons {
     margin-top: 20px;
     display: flex;
@@ -125,13 +130,15 @@ header {
 }
 
 .social-icons img {
-    width: 30px; /* Adjust size as needed */
-    height: 30px;
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+    margin: 0 8px;
     transition: transform 0.3s ease-in-out;
 }
 
-.social-icons img:hover {
-    transform: scale(1.2); /* Slight zoom effect on hover */
+social-icons img:hover {
+    transform: scale(1.15);
 }
 
 /* Language Switcher */
@@ -173,7 +180,6 @@ header {
     transform: scale(1.1); /* Slight zoom effect */
     box-shadow: 0 4px 10px rgba(255, 105, 180, 0.5); /* Pink glow */
 }
-
 
 /* Blog Page Styles */
 .blog-container {
@@ -268,21 +274,45 @@ header {
     align-items: center;
     text-align: center;
     margin-top: 50px;
+    width: 100%;
 }
 
 .about-box {
-    background: rgba(255, 255, 255, 0.1); /* Transparent effect */
+    width: 100%;
+    max-width: 800px;
     padding: 20px;
-    border-radius: 10px;
-    max-width: 600px;
-    width: 90%; /* Adjust width for smaller screens */
-    text-align: center;
-    box-shadow: 0 4px 10px rgba(255, 105, 180, 0.3); /* Pink glow */
-    backdrop-filter: blur(10px); /* Glassmorphism effect */
-    margin-top: 20px;
+}
+
+.about-box .card {
+    background: rgba(255, 255, 255, 0.08) !important;
+    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    margin-bottom: 20px;
+    box-shadow: 0 4px 10px rgba(255, 105, 180, 0.2);
+}
+
+.about-box .card-title {
+    color: #ff69b4;
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+}
+
+.about-box .bio {
+    color: #fff;
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 0;
+}
+
+@media (max-width: 768px) {
+    .about-box {
+        padding: 15px;
+    }
     
-    max-height: 300px; /* Set a maximum height */
-    overflow-y: auto; /* Enable vertical scrolling */
+    .about-box .bio {
+        font-size: 14px;
+    }
 }
 
 /* About Me Paragraph */
@@ -304,8 +334,20 @@ header {
     .about-box p {
         font-size: 14px; /* Adjust text size for better readability */
     }
+    .profile-pic img {
+        width: 150px;
+        height: 150px;
+        transform: scale(1.3);
+    }
+    .profile-pic {
+        width: 150px;
+        height: 150px;
+    }
+    .tech-icon, .social-icons img {
+        width: 28px;
+        height: 28px;
+    }
 }
-
 
 /* Center the profile section */
 .profile-section {
@@ -317,12 +359,16 @@ header {
 
 /* Center profile image */
 .profile-pic img {
-    width: 150px;
-    height: 150px;
+    width: 180px; /* Increased size for more detail */
+    height: 180px;
     border-radius: 50%;
     object-fit: cover;
+    object-position: 50% 15%; /* Moved up more to focus on face */
     display: block;
     margin: 0 auto;
+    border: 4px solid rgba(255, 105, 180, 0.5);
+    box-shadow: 0 0 20px rgba(255, 105, 180, 0.3);
+    transform: scale(1.3); /* Increased zoom while keeping container size same */
 }
 
 /* Center the info text */
@@ -352,12 +398,16 @@ header {
 
 /* Center profile image */
 .profile-pic img {
-    width: 150px;
-    height: 150px;
+    width: 180px; /* Increased size for more detail */
+    height: 180px;
     border-radius: 50%;
     object-fit: cover;
+    object-position: 50% 15%; /* Moved up more to focus on face */
     display: block;
     margin: 0 auto;
+    border: 4px solid rgba(255, 105, 180, 0.5);
+    box-shadow: 0 0 20px rgba(255, 105, 180, 0.3);
+    transform: scale(1.3); /* Increased zoom while keeping container size same */
 }
 
 /* Center the info text */
@@ -382,8 +432,15 @@ header {
 }
 
 .social-icons img {
-    width: 30px;
-    height: 30px;
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+    margin: 0 8px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.social-icons img:hover {
+    transform: scale(1.15);
 }
 
 .social-icons {
@@ -403,8 +460,15 @@ header {
 }
 
 .social-icons img {
-    width: 25px;  /* Adjust size */
-    height: 25px;
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+    margin: 0 8px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.social-icons img:hover {
+    transform: scale(1.15);
 }
 
 .social-icons i { /* For Font Awesome */
@@ -458,50 +522,205 @@ header {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
-
 /* Tech Stack Section */
 .techstack-content {
     text-align: center;
     padding: 40px 20px;
-  }
-  
-  .section-title {
-    font-size: 32px;
-    margin-bottom: 10px;
-    color: #ff69b4; /* Pink */
-  }
-  
-  .section-description {
-    font-size: 18px;
+}
+
+.section-title {
+    font-size: 2.2rem;
+    color: #ff69b4;
+    margin-bottom: 1rem;
+}
+
+.section-description {
+    font-size: 1.1rem;
     color: #ccc;
-    margin-bottom: 20px;
-  }
-  
-  /* Tech Stack List */
-  .tech-list {
+    margin-bottom: 1.5rem;
+}
+
+/* Tech Stack List */
+.tech-list {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); /* Makes it responsive */
     gap: 20px;
     justify-items: center;
     align-items: center;
     margin-top: 20px;
-  }
-  
-  /* Tech Item */
-  .tech-item {
+}
+
+/* Tech Item */
+.tech-item {
     display: flex;
     justify-content: center;
     align-items: center;
-  }
-  
-  .tech-icon {
-    width: 60px; /* Adjust size as needed */
-    height: 60px; /* Adjust size as needed */
+}
+
+.tech-icon {
+    width: 40px;
+    height: 40px;
     object-fit: contain;
+    margin: 0 8px;
     transition: transform 0.3s ease-in-out;
-  }
-  
-  .tech-icon:hover {
-    transform: scale(1.1); /* Zoom effect on hover */
-  }
-  
+}
+
+.tech-icon:hover {
+    transform: scale(1.15);
+}
+
+/* Profile Image */
+.profile-img {
+    width: 180px; /* Increased size for more detail */
+    height: 180px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: 50% 15%; /* Moved up more to focus on face */
+    display: block;
+    margin: 0 auto;
+    border: 4px solid rgba(255, 105, 180, 0.5);
+    box-shadow: 0 0 20px rgba(255, 105, 180, 0.3);
+    transform: scale(1.3); /* Increased zoom while keeping container size same */
+}
+
+/* Fog Background */
+#fog-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+    background-color: #000;
+}
+
+/* Navbar styles */
+.navbar-dark.bg-transparent {
+    background-color: rgba(0, 0, 0, 0.4) !important;
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+}
+
+.navbar-toggler {
+    border: 2px solid rgba(255, 105, 180, 0.5);
+    padding: 0.5rem;
+}
+
+.navbar-toggler:focus {
+    box-shadow: 0 0 0 0.25rem rgba(255, 105, 180, 0.25);
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 105, 180, 0.75%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .navbar-collapse {
+        background: rgba(0, 0, 0, 0.8);
+        -webkit-backdrop-filter: blur(10px);
+        backdrop-filter: blur(10px);
+        padding: 1rem;
+        border-radius: 8px;
+        margin-top: 1rem;
+    }
+
+    .nav-link {
+        padding: 0.5rem 1rem;
+        text-align: center;
+    }
+
+    .nav-link:hover {
+        background: rgba(255, 105, 180, 0.1);
+        border-radius: 4px;
+    }
+    .profile-img, .profile-pic img {
+        width: 150px;
+        height: 150px;
+        transform: scale(1.3);
+    }
+    .profile-pic {
+        width: 150px;
+        height: 150px;
+    }
+}
+
+/* Certification Cards */
+.cert-image {
+    height: 200px;
+    object-fit: contain;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 1rem;
+}
+
+.card {
+    transition: transform 0.3s ease-in-out;
+    height: 100%;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(255, 105, 180, 0.3);
+}
+
+.card-body {
+    display: flex;
+    flex-direction: column;
+}
+
+.card-text {
+    flex-grow: 1;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+    .cert-image {
+        height: 150px;
+    }
+}
+
+/* Certification Cards and Modals */
+.cert-image {
+    height: 200px;
+    object-fit: contain;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 1rem;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.cert-image:hover {
+    transform: scale(1.05);
+}
+
+.modal-content {
+    background-color: transparent !important;
+}
+
+.modal-header {
+    border-bottom: none;
+    padding: 0.5rem;
+    position: absolute;
+    right: 0;
+    z-index: 1;
+}
+
+.btn-close-white {
+    filter: brightness(0) invert(1);
+    opacity: 0.8;
+}
+
+.btn-close:hover {
+    opacity: 1;
+}
+
+.modal-body {
+    padding: 0;
+    background: transparent;
+}
+
+.modal-body img {
+    width: 100%;
+    border-radius: 8px;
+}

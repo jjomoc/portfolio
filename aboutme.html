@@ -5,36 +5,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>About Me - Justine Jomoc</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="styles.css">
-  <style>
-    /* Ensures fog effect covers the whole background */
-    body, html {
-        margin: 0;
-        padding: 0;
-        height: 100%;
-        overflow: hidden; /* Prevents scrollbars */
-    }
-
-    #fog-background {
-        width: 100vw;
-        height: 100vh;
-        position: absolute;
-        top: 0;
-        left: 0;
-        z-index: -1; /* Keeps fog behind other elements */
-    }
-
-    .container {
-        position: relative;
-        z-index: 1; /* Ensures content is above fog */
-        text-align: center;
-        color: white;
-        font-family: 'Inter', sans-serif;
-    }
-  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 
-<body>
+<body class="d-flex flex-column min-vh-100">
 
   <!-- Background Fog Effect -->
   <div id="fog-background"></div>
@@ -42,28 +18,51 @@
   <div class="container">
 
     <!-- Header with Navigation -->
-    <header class="header">
-      <div class="logo">
-        <span class="icon">🎀</span>
-        <span class="name">JUSTINE JOMOC</span>
-      </div>
-      <nav class="navbar">
-        <a href="index.html" class="nav-link">Home</a>
-        <a href="aboutme.html" class="nav-link active">About Me</a>
-        <a href="techstack.html" class="nav-link">Tech Stack</a>
-        <a href="contactme.html" class="nav-link">Contact Me</a>
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-dark bg-transparent fixed-top">
+        <div class="container-fluid">
+          <a class="navbar-brand logo d-flex align-items-center" href="index.html">
+            <span class="name ms-2">JJ</span>
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="mainNavbar">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+              <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+              <li class="nav-item"><a href="aboutme.html" class="nav-link active">About Me</a></li>
+              <li class="nav-item"><a href="techstack.html" class="nav-link">Tech Stack</a></li>
+              <li class="nav-item"><a href="contactme.html" class="nav-link">Contact Me</a></li>
+              <li class="nav-item"><a href="certifications.html" class="nav-link">Certifications</a></li>
+            </ul>
+          </div>
+        </div>
       </nav>
     </header>
 
     <!-- About Me Content -->
-    <main class="about-content">
-      <h1 class="section-title">About Me</h1>
+    <main class="flex-grow-1 d-flex flex-column justify-content-center align-items-center mt-5 pt-5">
+      <div class="about-content">
+        <h1 class="section-title">About Me</h1>
         <div class="info">
           <p class="note">Aspiring App and Web Developer</p>
-          <div class = "about-box">
-          <p class="bio">
-            I am currently a second-year college student at St. Dominic College of Asia, pursuing a Bachelor of Science in Information Technology (BSIT). I am passionate about exploring app development and web development and am eager to expand my knowledge and skills in these fields. My goal is to gain hands-on experience and deepen my understanding of the latest technologies to contribute to innovative projects in the future.
-          </p>
+          <div class="about-box">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">Education & Background</h5>
+                <p class="bio">
+                  I am currently a second-year college student at St. Dominic College of Asia, pursuing a Bachelor of Science in Information Technology (BSIT). I am passionate about exploring app development and web development and am eager to expand my knowledge and skills in these fields.
+                </p>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">Goals & Aspirations</h5>
+                <p class="bio">
+                  My goal is to become a versatile full-stack developer, capable of creating innovative solutions that make a positive impact. I'm particularly interested in modern web technologies, mobile app development, and exploring emerging tech trends. Through continuous learning and hands-on projects, I aim to build a strong foundation in software development and contribute to meaningful projects in the tech industry.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -74,23 +73,8 @@
   <!-- Vanta.js Scripts -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.fog.min.js"></script>
-
-  <script>
-      VANTA.FOG({
-          el: "#fog-background",  // Target the correct element
-          mouseControls: true,
-          touchControls: true,
-          gyroControls: false,
-          minHeight: 200.00,
-          minWidth: 200.00,
-          highlightColor: 0xe14ea4, // Light pink fog
-          midtoneColor: 0xaaaaaa,  // Light gray fog
-          lowlightColor: 0x222222, // Dark fog
-          baseColor: 0x000000,     // Background color
-          speed: 1.5,              // Fog movement speed
-          zoom: 1.0                // Zoom level
-      });
-  </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="scripts.js"></script>
 
 </body>
 
