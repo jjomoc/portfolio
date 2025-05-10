@@ -273,7 +273,7 @@ social-icons img:hover {
     flex-direction: column;
     align-items: center;
     text-align: center;
-    margin-top: 50px;
+    margin-top: 20px;
     width: 100%;
 }
 
@@ -381,7 +381,7 @@ social-icons img:hover {
     justify-content: flex-start;
     min-height: 100vh;
     text-align: center;
-    padding-top: 50px;
+    padding-top: 40px;
 }
 
 /* Center the profile section */
@@ -543,15 +543,16 @@ social-icons img:hover {
     gap: 20px;
     justify-items: center;
     align-items: center;
-    margin-top: 20px;
+    margin-top: 10px;
 }
 
 /* Tech Item */
 .tech-item {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
-}
+    margin: 20px;
+  }
 
 .tech-icon {
     width: 40px;
