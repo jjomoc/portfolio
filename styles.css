@@ -381,7 +381,7 @@ social-icons img:hover {
     justify-content: flex-start;
     min-height: 100vh;
     text-align: center;
-    padding-top: 40px;
+    padding-top: 50px;
 }
 
 /* Center the profile section */
@@ -403,7 +403,7 @@ social-icons img:hover {
     margin: 0 auto;
     border: 4px solid rgba(255, 105, 180, 0.5);
     box-shadow: 0 0 20px rgba(255, 105, 180, 0.3);
-    transform: scale(1.3); /* Increased zoom while keeping container size same */
+    transform: scale(1.3) translateY(10px); /* Increased zoom while keeping container size same */
 }
 
 /* Center the info text */
