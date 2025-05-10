@@ -1,16 +1,14 @@
-/* General Styles */
 body {
     font-family: 'Inter', sans-serif;
     margin: 0;
     padding: 0;
-    background: #000; /* Black background */
-    color: #fff; /* White text */
+    background: #000; 
+    color: #fff; 
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-/* Container */
 .container {
     max-width: 900px;
     width: 100%;
@@ -20,7 +18,6 @@ body {
     z-index: 1;
 }
 
-/* Header and Navigation */
 header {
     display: flex;
     justify-content: space-between;
@@ -31,20 +28,18 @@ header {
     font-weight: 600;
 }
 
-/* Logo */
 .logo {
     display: flex;
     align-items: center;
     font-size: 22px;
     font-weight: bold;
-    color: #ff69b4; /* Pink */
+    color: #ff69b4; 
 }
 
 .logo .icon {
     margin-right: 8px;
 }
 
-/* Navigation Bar */
 .navbar {
     font-size: 20px;
     display: flex;
@@ -52,17 +47,16 @@ header {
 }
 
 .navbar a {
-    color: #fff; /* White text */
+    color: #fff; 
     text-decoration: none;
     font-weight: 600;
     transition: color 0.3s ease;
 }
 
 .navbar a:hover {
-    color: #ff69b4; /* Pink hover effect */
+    color: #ff69b4; 
 }
 
-/* Profile Section */
 .profile-section {
     display: flex;
     justify-content: center;
@@ -71,30 +65,28 @@ header {
     margin-top: 40px;
 }
 
-/* Profile Picture */
 .profile-pic {
     position: relative;
     width: 180px;
     height: 180px;
     border-radius: 50%;
     overflow: hidden;
-    box-shadow: 5px 5px 15px #ff69b4; /* Pink shadow */
+    box-shadow: 5px 5px 15px #ff69b4; 
 }
 
 .profile-pic img {
-    width: 180px; /* Increased size for more detail */
+    width: 180px; 
     height: 180px;
     border-radius: 50%;
     object-fit: cover;
-    object-position: 50% 15%; /* Moved up more to focus on face */
+    object-position: 50% 15%;
     display: block;
     margin: 0 auto;
     border: 4px solid rgba(255, 105, 180, 0.5);
     box-shadow: 0 0 20px rgba(255, 105, 180, 0.3);
-    transform: scale(1.3); /* Increased zoom while keeping container size same */
+    transform: scale(1.3); 
 }
 
-/* Info Section */
 .info {
     margin-left: 20px;
     text-align: left;
@@ -117,7 +109,6 @@ header {
     color: #fff;
 }
 
-/* Social Icons */
 .social-icons {
     margin-top: 20px;
     display: flex;
@@ -141,7 +132,6 @@ social-icons img:hover {
     transform: scale(1.15);
 }
 
-/* Language Switcher */
 .language-switcher {
     margin-top: 20px;
 }
@@ -163,25 +153,23 @@ social-icons img:hover {
     color: #000;
 }
 
-/*Blog buttton */
 .blog-link {
     display: inline-block;
-    padding: 12px 20px; /* Bigger padding */
-    font-size: 18px; /* Bigger text */
+    padding: 12px 20px; 
+    font-size: 18px; 
     font-weight: 600;
     text-decoration: none;
-    color: black; /* Text color */
-    background-color: #ff69b4; /* Pink background */
-    border-radius: 8px; /* Rounded corners */
+    color: black; 
+    background-color: #ff69b4; 
+    border-radius: 8px; 
     transition: 0.3s ease-in-out;
 }
 
 .blog-link:hover {
-    transform: scale(1.1); /* Slight zoom effect */
-    box-shadow: 0 4px 10px rgba(255, 105, 180, 0.5); /* Pink glow */
+    transform: scale(1.1); 
+    box-shadow: 0 4px 10px rgba(255, 105, 180, 0.5); 
 }
 
-/* Blog Page Styles */
 .blog-container {
     max-width: 800px;
     width: 100%;
@@ -200,7 +188,6 @@ social-icons img:hover {
     margin-bottom: 20px;
 }
 
-/* Blog Post Styling */
 .blog-post {
     background: #111;
     padding: 15px;
@@ -218,14 +205,12 @@ social-icons img:hover {
     color: #fff;
 }
 
-/* Footer */
 .footer {
     margin-top: 30px;
     font-size: 14px;
     color: #999;
 }
 
-/* Responsive Design */
 @media (max-width: 768px) {
     header {
         flex-direction: column;
@@ -247,27 +232,24 @@ social-icons img:hover {
     }
 }
 
-/* Blog Post */
 .blog-post {
-    background: #111; /* Dark background */
+    background: #111; 
     padding: 20px;
     border-radius: 10px;
     margin-bottom: 20px;
-    box-shadow: 5px 5px 15px rgba(255, 105, 180, 0.4); /* Pink shadow */
-    text-align: center; /* Centers all content */
+    box-shadow: 5px 5px 15px rgba(255, 105, 180, 0.4); 
+    text-align: center; 
 }
 
-/* Blog Post Image */
 .post-image {
     width: 100%;
     max-width: 600px;
     border-radius: 10px;
-    margin: 15px auto; /* Centers the image */
-    display: block; /* Ensures it takes the full width */
+    margin: 15px auto; 
+    display: block; 
     box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
 }
 
-/* Center the About Me content */
 .about-content {
     display: flex;
     flex-direction: column;
@@ -315,20 +297,18 @@ social-icons img:hover {
     }
 }
 
-/* About Me Paragraph */
 .about-box p {
-    color: #fff; /* White text */
+    color: #fff; 
     font-size: 16px;
     line-height: 1.6;
-    word-wrap: break-word; /* Prevents text from overflowing */
+    word-wrap: break-word; 
 }
 
-/* Mobile Optimization */
 @media (max-width: 768px) {
  
 
     .about-box p {
-        font-size: 14px; /* Adjust text size for better readability */
+        font-size: 14px; 
     }
     .profile-pic img {
         width: 150px;
@@ -345,7 +325,6 @@ social-icons img:hover {
     }
 }
 
-/* Center the profile section */
 .profile-section {
     display: flex;
     flex-direction: column;
@@ -353,27 +332,24 @@ social-icons img:hover {
     max-width: 600px;
 }
 
-/* Center profile image */
 .profile-pic img {
-    width: 180px; /* Increased size for more detail */
+    width: 180px; 
     height: 180px;
     border-radius: 50%;
     object-fit: cover;
-    object-position: 50% 15%; /* Moved up more to focus on face */
+    object-position: 50% 15%; 
     display: block;
     margin: 0 auto;
     border: 4px solid rgba(255, 105, 180, 0.5);
     box-shadow: 0 0 20px rgba(255, 105, 180, 0.3);
-    transform: scale(1.3); /* Increased zoom while keeping container size same */
+    transform: scale(1.3); 
 }
 
-/* Center the info text */
 .info {
     text-align: center;
     margin-top: 15px;
 }
 
-/* Center the main content */
 .container {
     display: flex;
     flex-direction: column;
@@ -384,7 +360,6 @@ social-icons img:hover {
     padding-top: 50px;
 }
 
-/* Center the profile section */
 .profile-section {
     display: flex;
     flex-direction: column;
@@ -392,34 +367,30 @@ social-icons img:hover {
     margin-top: 20px;
 }
 
-/* Center profile image */
 .profile-pic img {
-    width: 180px; /* Increased size for more detail */
+    width: 180px; 
     height: 180px;
     border-radius: 50%;
     object-fit: cover;
-    object-position: 50% 15%; /* Moved up more to focus on face */
+    object-position: 50% 15%; 
     display: block;
     margin: 0 auto;
     border: 4px solid rgba(255, 105, 180, 0.5);
     box-shadow: 0 0 20px rgba(255, 105, 180, 0.3);
-    transform: scale(1.3) translateY(10px); /* Increased zoom while keeping container size same */
+    transform: scale(1.3) translateY(10px); 
 }
 
-/* Center the info text */
 .info {
     text-align: center;
     margin-top: 15px;
 }
 
-/* Center the bio text */
 .bio {
     max-width: 600px;
     text-align: center;
     margin-top: 20px;
 }
 
-/* Center social icons */
 .social-icons {
     display: flex;
     justify-content: center;
@@ -467,11 +438,10 @@ social-icons img:hover {
     transform: scale(1.15);
 }
 
-.social-icons i { /* For Font Awesome */
+.social-icons i { 
     font-size: 24px;
 }
 
-/* Center and space the icons */
 .social-icons {
     display: flex;
     justify-content: center;
@@ -480,7 +450,6 @@ social-icons img:hover {
     flex-wrap: wrap;
 }
 
-/* Style for links */
 .social-icons a {
     text-decoration: none;
     font-size: 18px;
@@ -493,32 +462,28 @@ social-icons img:hover {
     transition: 0.3s ease-in-out;
 }
 
-/* Individual icon styles */
 .social-icons a i {
     font-size: 24px;
 }
 
-/* Black and Pink theme */
-.social-icons a:nth-child(1) { /* Email */
+.social-icons a:nth-child(1) {
     background-color: pink;
     color: black;
 }
-.social-icons a:nth-child(2) { /* GitHub */
+.social-icons a:nth-child(2) { 
     background-color: black;
     color: pink;
 }
-.social-icons a:nth-child(3) { /* LinkedIn */
+.social-icons a:nth-child(3) { 
     background-color: pink;
     color: black;
 }
 
-/* Hover effects */
 .social-icons a:hover {
     transform: scale(1.1);
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
-/* Tech Stack Section */
 .techstack-content {
     text-align: center;
     padding: 40px 20px;
@@ -536,17 +501,15 @@ social-icons img:hover {
     margin-bottom: 1.5rem;
 }
 
-/* Tech Stack List */
 .tech-list {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); /* Makes it responsive */
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); 
     gap: 20px;
     justify-items: center;
     align-items: center;
     margin-top: 10px;
 }
 
-/* Tech Item */
 .tech-item {
     display: flex;
     flex-direction: column;
@@ -566,21 +529,19 @@ social-icons img:hover {
     transform: scale(1.15);
 }
 
-/* Profile Image */
 .profile-img {
-    width: 180px; /* Increased size for more detail */
+    width: 180px;
     height: 180px;
     border-radius: 50%;
     object-fit: cover;
-    object-position: 50% 15%; /* Moved up more to focus on face */
+    object-position: 50% 15%; 
     display: block;
     margin: 0 auto;
     border: 4px solid rgba(255, 105, 180, 0.5);
     box-shadow: 0 0 20px rgba(255, 105, 180, 0.3);
-    transform: scale(1.3); /* Increased zoom while keeping container size same */
+    transform: scale(1.3); 
 }
 
-/* Fog Background */
 #fog-background {
     position: fixed;
     top: 0;
@@ -591,7 +552,6 @@ social-icons img:hover {
     background-color: #000;
 }
 
-/* Navbar styles */
 .navbar-dark.bg-transparent {
     background-color: rgba(0, 0, 0, 0.4) !important;
     -webkit-backdrop-filter: blur(10px);
@@ -611,7 +571,6 @@ social-icons img:hover {
     background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 105, 180, 0.75%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
 }
 
-/* Responsive adjustments */
 @media (max-width: 768px) {
     .navbar-collapse {
         background: rgba(0, 0, 0, 0.8);
@@ -642,7 +601,6 @@ social-icons img:hover {
     }
 }
 
-/* Certification Cards */
 .cert-image {
     height: 200px;
     object-fit: contain;
@@ -677,7 +635,6 @@ social-icons img:hover {
     }
 }
 
-/* Certification Cards and Modals */
 .cert-image {
     height: 200px;
     object-fit: contain;
