@@ -1,0 +1,15 @@
+{
+  "name": "justine-portfolio",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "build": "node build-particle-config.cjs && tailwindcss -i ./src/input.css -o ./styles.css --minify",
+    "dev": "node build-particle-config.cjs && tailwindcss -i ./src/input.css -o ./styles.css --watch",
+    "test": "node --test tests/portfolio.test.cjs"
+  },
+  "devDependencies": {
+    "@tailwindcss/cli": "^4.3.0",
+    "tailwindcss": "^4.3.0",
+    "jsdom": "^26.1.0"
+  }
+}
