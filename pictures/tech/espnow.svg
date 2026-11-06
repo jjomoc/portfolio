@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" width="80" height="80">
+  <rect width="80" height="80" rx="16" fill="#181824"/>
+  <!-- Wireless signal waves -->
+  <g stroke="#ff69b4" stroke-width="3" fill="none" stroke-linecap="round" transform="translate(40, 52)">
+    <circle cx="0" cy="0" r="4" fill="#ff69b4"/>
+    <path d="M -12,-10 A 16,16 0 0,1 12,-10"/>
+    <path d="M -22,-20 A 30,30 0 0,1 22,-20"/>
+    <path d="M -32,-30 A 44,44 0 0,1 32,-30"/>
+  </g>
+</svg>

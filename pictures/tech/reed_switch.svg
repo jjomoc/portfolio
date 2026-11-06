@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" width="80" height="80">
+  <rect x="12" y="12" width="56" height="56" rx="8" fill="#2b2d42" stroke="#8d99ae" stroke-width="2"/>
+  <!-- Magnet and switch contacts -->
+  <g stroke="#edf2f4" stroke-width="3" stroke-linecap="round" fill="none">
+    <line x1="22" y1="40" x2="34" y2="40"/>
+    <line x1="34" y1="40" x2="48" y2="30"/>
+    <line x1="46" y1="40" x2="58" y2="40"/>
+  </g>
+  <circle cx="34" cy="40" r="3" fill="#ef233c"/>
+  <circle cx="46" cy="40" r="3" fill="#ef233c"/>
+</svg>

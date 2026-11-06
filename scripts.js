@@ -1,4 +1,4 @@
-(() => {
+﻿(() => {
   const root = document.documentElement;
   const sections = [...document.querySelectorAll('[data-section]')];
   const gallery = document.querySelector('#gallery');
@@ -263,10 +263,107 @@
   const requirements = [
     ['About & OJT interests','Fourth-year BSIT; seeking Quality Assurance or IT Support OJT. Personal introduction added.',true],['Social profile links','GitHub, LinkedIn, Facebook, and Instagram added using your supplied URLs.',true],['OJT schedule','Confirm start date, required hours, and availability.'],['Certifications','Verify titles, issuers, earned dates; add new certificates.'],['Course completions','Titles, providers, completion dates, and evidence.'],['IoT project','Description, objectives, components, your role, result, and evidence.'],['Capstone project','Title, objectives, technologies, team, role, status, and evidence.'],['Third-year projects','Selected course outputs and individual contributions.'],['Other achievements','Recognition, scholarships, trainings, or workshops.'],['Competitions & awards','Event, organizer, date, result, submitted work, and evidence.'],['Leadership','Organization, position, academic year, contributions, and documents.'],['Tech stack','Confirm your current tools and specific Cisco skills.'],['Final review','Proofread, check evidence, and verify the accessible public link.'],['Canvas submission','Submit the portfolio link before the instructor’s deadline.']
   ];
-  requirements.forEach(([title,detail,complete=false]) => { const li=document.createElement('li'),box=document.createElement('span'),text=document.createElement('div'),small=document.createElement('small'),status=document.createElement('span'); li.classList.toggle('requirement-complete',complete); box.setAttribute('aria-hidden','true'); box.textContent=complete?'✓':''; status.className='sr-only'; status.textContent=complete?'Complete: ':'Pending: '; text.append(status,document.createTextNode(title)); small.textContent=detail; text.append(small); li.append(box,text); document.querySelector('#requirements-list').append(li); });
-  const dialog=document.querySelector('#certificate-dialog');
-  document.querySelectorAll('[data-certificate]').forEach(button => button.addEventListener('click', () => { document.querySelector('#certificate-title').textContent=button.dataset.title; const image=document.querySelector('#certificate-full'); image.src=button.dataset.certificate; image.alt=button.dataset.title; document.querySelector('#certificate-original').href=button.dataset.certificate; if (typeof dialog.showModal==='function') dialog.showModal(); else window.open(button.dataset.certificate,'_blank','noopener,noreferrer'); }));
-  document.querySelector('#certificate-close').addEventListener('click',()=>dialog.close());
-  dialog.addEventListener('click',event=>{ if(event.target===dialog){ const r=dialog.getBoundingClientRect(); if(event.clientX<r.left||event.clientX>r.right||event.clientY<r.top||event.clientY>r.bottom)dialog.close(); } });
+  requirements.forEach(([title,detail,complete=false]) => { const li=document.createElement('li'),box=document.createElement('span'),text=document.createElement('div'),small=document.createElement('small'),status=document.createElement('span'); li.classList.toggle('requirement-complete',complete); box.setAttribute('aria-hidden','true'); box.textContent=complete?'✓':''; status.className='sr-only'; status.textContent=complete?'Complete: ':'Pending: '; text.append(status,document.createTextNode(title)); small.textContent=detail; text.append(small); li.append(box,text); const reqList = document.querySelector('#requirements-list'); if (reqList) reqList.append(li); });
+  const dialog = document.querySelector('#certificate-dialog');
+  const certFrame = document.querySelector('#certificate-frame');
+  const certImage = document.querySelector('#certificate-full');
+  const certCaption = document.querySelector('#certificate-caption');
+
+  document.querySelectorAll('[data-certificate]').forEach(button => {
+    button.addEventListener('click', () => {
+      const src = button.dataset.certificate;
+      const type = button.dataset.type || 'image';
+      const title = button.dataset.title || 'Certificate';
+      const caption = button.dataset.caption || '';
+
+      document.querySelector('#certificate-title').textContent = title;
+      if (certCaption) certCaption.textContent = caption;
+      document.querySelector('#certificate-original').href = src;
+
+      if (type === 'pdf') {
+        certImage.style.display = 'none';
+        if (certFrame) {
+          certFrame.style.display = 'block';
+          certFrame.src = src;
+        }
+      } else {
+        if (certFrame) {
+          certFrame.style.display = 'none';
+          certFrame.src = '';
+        }
+        certImage.style.display = 'block';
+        certImage.src = src;
+        certImage.alt = title;
+      }
+
+      if (typeof dialog.showModal === 'function') {
+        dialog.showModal();
+      } else {
+        window.open(src, '_blank', 'noopener,noreferrer');
+      }
+    });
+  });
+
+  const closeDialog = () => {
+    if (certFrame) {
+      certFrame.src = '';
+      certFrame.style.display = 'none';
+    }
+    dialog.close();
+  };
+
+  document.querySelector('#certificate-close').addEventListener('click', closeDialog);
+  dialog.addEventListener('click', event => {
+    if (event.target === dialog) {
+      const r = dialog.getBoundingClientRect();
+      if (event.clientX < r.left || event.clientX > r.right || event.clientY < r.top || event.clientY > r.bottom) {
+        closeDialog();
+      }
+    }
+  });
+  showSection(location.hash.slice(1));
+
+  /* ============================================================
+     AESTHETIC STAR SPARKLES MOUSE TRAIL EFFECT
+     ============================================================ */
+  const sparkleColors = ['#ff69b4', '#ffced8', '#fbcfe8', '#ffffff', '#ffd1dc', '#f472b6'];
+  const sparkleShapes = ['★', '✦', '✧', '⋆', '•'];
+  let lastSparkleTime = 0;
+
+  window.addEventListener('pointermove', event => {
+    const now = performance.now();
+    if (now - lastSparkleTime < 35) return; // Smooth throttling
+    lastSparkleTime = now;
+
+    const sparkle = document.createElement('span');
+    sparkle.className = 'star-sparkle';
+    sparkle.textContent = sparkleShapes[Math.floor(Math.random() * sparkleShapes.length)];
+    sparkle.style.left = `${event.clientX}px`;
+    sparkle.style.top = `${event.clientY}px`;
+    sparkle.style.color = sparkleColors[Math.floor(Math.random() * sparkleColors.length)];
+    sparkle.style.fontSize = `${Math.floor(Math.random() * 12 + 10)}px`;
+    sparkle.style.textShadow = `0 0 6px ${sparkle.style.color}`;
+
+    document.body.appendChild(sparkle);
+
+    setTimeout(() => {
+      sparkle.remove();
+    }, 800);
+  }, { passive: true });
+    // Direct Gmail web composer launcher
+  const emailBtn = document.querySelector('.email-cta-btn');
+  if (emailBtn) {
+    emailBtn.addEventListener('click', function(event) {
+      event.preventDefault();
+      var targetEmail = 'jomocjustine@gmail.com';
+      var subject = encodeURIComponent('OJT Inquiry');
+      var gmailUrl = 'https://mail.google.com/mail/?view=cm&fs=1&to=' + targetEmail + '&su=' + subject;
+      var win = window.open(gmailUrl, '_blank', 'noopener,noreferrer');
+      if (!win) {
+        window.location.href = 'mailto:' + targetEmail + '?subject=' + subject;
+      }
+    });
+  }
+
   showSection(location.hash.slice(1));
 })();

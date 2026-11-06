@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 100" width="120" height="100">
+  <defs>
+    <linearGradient id="robot-bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#6366f1"/>
+      <stop offset="100%" stop-color="#312e81"/>
+    </linearGradient>
+  </defs>
+  <rect width="120" height="100" rx="12" fill="url(#robot-bg)"/>
+  <!-- AI / Brain / Robot CPU symbol -->
+  <g fill="#ffffff" transform="translate(60, 32)">
+    <circle cx="-12" cy="0" r="5" fill="#a5b4fc"/>
+    <circle cx="12" cy="0" r="5" fill="#a5b4fc"/>
+    <circle cx="0" cy="-14" r="5" fill="#a5b4fc"/>
+    <circle cx="0" cy="14" r="5" fill="#a5b4fc"/>
+    <circle cx="0" cy="0" r="7" fill="#ffffff"/>
+    <line x1="-12" y1="0" x2="12" y2="0" stroke="#ffffff" stroke-width="2"/>
+    <line x1="0" y1="-14" x2="0" y2="14" stroke="#ffffff" stroke-width="2"/>
+  </g>
+  <text x="60" y="74" font-family="system-ui, -apple-system, sans-serif" font-size="10.5" font-weight="800" fill="#ffffff" text-anchor="middle" letter-spacing="1">AI &amp; ROBOTICS</text>
+  <text x="60" y="87" font-family="system-ui, -apple-system, sans-serif" font-size="7.5" font-weight="600" fill="#c7d2fe" text-anchor="middle" letter-spacing="1">SEMINAR</text>
+</svg>

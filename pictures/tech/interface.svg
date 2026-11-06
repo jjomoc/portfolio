@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" width="80" height="80">
+  <rect x="12" y="12" width="56" height="56" rx="10" fill="#241e38" stroke="#b5179e" stroke-width="2"/>
+  <!-- Two connected microchip nodes with bus wires -->
+  <rect x="22" y="32" width="14" height="16" rx="2" fill="#7209b7"/>
+  <rect x="44" y="32" width="14" height="16" rx="2" fill="#4361ee"/>
+  <line x1="36" y1="36" x2="44" y2="36" stroke="#4cc9f0" stroke-width="2"/>
+  <line x1="36" y1="44" x2="44" y2="44" stroke="#f72585" stroke-width="2"/>
+  <circle cx="40" cy="36" r="2" fill="#ffffff"/>
+  <circle cx="40" cy="44" r="2" fill="#ffffff"/>
+</svg>
