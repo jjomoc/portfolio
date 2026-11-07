@@ -1,4 +1,4 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="en" data-theme="dark">
 <head>
   <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
@@ -25,27 +25,148 @@
   <p class="panel-kicker">Capstone &middot; Course Projects &middot; IoT</p>
   
   <!-- Project 1: ALERTO -->
-  <div class="detail-block">
-    <h2>ALERTO &mdash; IoT Capstone Project</h2>
-    <p>An emergency alert and telemetry monitoring system built using microcontrollers and smart sensors for rapid risk detection and tracking.</p>
-    <p><strong>My Role:</strong> Project Manager & Documentation for Papers</p>
-    <p><strong>Key Contributions:</strong></p>
-    <p>&bull; Managed project timelines, milestone tracking, and task coordination.<br>
-    &bull; Authored Chapters 1&ndash;3 and complete System Requirement Specifications (SRS).<br>
-    &bull; Created system flowcharts, circuit architecture diagrams, and scheduling charts.<br>
-    &bull; Supported microcontroller sensor wiring and bench testing with ESP32, sensors, and GPS modules.</p>
+  <div class="project-showcase-card">
+    <div class="project-header-row">
+      <span class="project-tag">IoT &amp; Capstone Project</span>
+      <h2 class="project-heading">ALERTO: Location-Based Alert &amp; Commuter Safety System</h2>
+    </div>
+
+    <!-- Video Demonstration & Hardware Showcase -->
+    <div class="project-media-grid">
+      <div class="project-video-wrapper">
+        <video class="project-video" controls playsinline preload="metadata">
+          <source src="pictures/alerto_video.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+        <div class="media-badge">System Video Demo</div>
+      </div>
+      <div class="project-images-subgrid">
+        <div class="project-img-box">
+          <img src="pictures/alerto.png" alt="ALERTO IoT Hardware Device" loading="lazy">
+          <span>IoT Hardware Module</span>
+        </div>
+        <div class="project-img-box">
+          <img src="pictures/alerto-app.png" alt="ALERTO Mobile Application" loading="lazy">
+          <span>Mobile App Interface</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Description & Justine's Roles -->
+    <div class="project-info-body">
+      <p class="project-desc">
+        ALERTO combines an anti-theft smart bag device and a real-time mobile app into a unified commuter safety ecosystem. It alerts commuters near their destinations, detects bag tampering through sensors, monitors travel safety, and maintains continuous emergency connectivity.
+      </p>
+
+      <div class="project-meta-pill">
+        <strong>My Roles:</strong> Documentation for Papers &amp; Hardware Support
+      </div>
+
+      <div class="project-details-grid">
+        <div class="project-detail-col">
+          <h3>Documentation &amp; Project Contributions</h3>
+          <ul>
+            <li>Led the preparation of Chapters 1&ndash;3 and the comprehensive System Requirements Specifications (SRS).</li>
+            <li>Created system flowcharts, block diagrams, and project milestone schedules.</li>
+            <li>Collaborated with team members to document user requirements and system testing results.</li>
+          </ul>
+        </div>
+        <div class="project-detail-col">
+          <h3>Hardware Support &amp; Testing</h3>
+          <ul>
+            <li>Assisted in assembling and testing hardware modules on breadboards and enclosures.</li>
+            <li>Supported testing and bench verification of the ESP32-S3 microcontroller, Neo-M8N GPS, and Air780E 4G LTE modules.</li>
+            <li>Helped validate sensor inputs including the MPU6050 motion sensor, magnetic reed switch, active buzzer, and vibration motor.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="project-tech-badges">
+        <span class="tech-badge">ESP32-S3</span>
+        <span class="tech-badge">GPS Neo-M8N</span>
+        <span class="tech-badge">Air780E 4G LTE</span>
+        <span class="tech-badge">MPU6050</span>
+        <span class="tech-badge">Reed Switch</span>
+        <span class="tech-badge">React Native &amp; Expo</span>
+        <span class="tech-badge">Next.js &amp; Vercel</span>
+        <span class="tech-badge">MongoDB Atlas</span>
+      </div>
+
+      <!-- Action Buttons -->
+      <div class="project-actions">
+        <a href="https://alerto-web-system.vercel.app/" target="_blank" rel="noopener noreferrer" class="project-btn primary-btn">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 100 20 10 10 0 000-20zm7.93 9h-3.18a15.7 15.7 0 00-1.37-5.06A8.01 8.01 0 0119.93 11zM12 4.07c.88 1.5 1.54 3.6 1.73 5.93h-3.46c.19-2.33.85-4.43 1.73-5.93zM4.07 13h3.18c.17 1.84.66 3.61 1.37 5.06A8.01 8.01 0 014.07 13zm3.18-2H4.07a8.01 8.01 0 013.38-5.06c-.71 1.45-1.2 3.22-1.37 5.06zm4.75 8.93c-.88-1.5-1.54-3.6-1.73-5.93h3.46c-.19 2.33-.85 4.43-1.73 5.93zm2.62-7.93H9.38c-.16-1.3-.26-2.65-.26-4s.1-2.7.26-4h5.24c.16 1.3.26 2.65.26 4s-.1 2.7-.26 4zm1.76 6.99c.71-1.45 1.2-3.22 1.37-5.06h3.18a8.01 8.01 0 01-3.38 5.06z"/></svg>
+          <span>Web System &rarr;</span>
+        </a>
+        <a href="https://expo.dev/accounts/alerto_9/projects/alerto_frontend_mobile/builds/a6533dcd-b639-4dcd-8040-6884236f5b0e" target="_blank" rel="noopener noreferrer" class="project-btn secondary-btn">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true"><path d="M17 1.01L7 1c-1.1 0-2 .9-2 2v18c0 1.1.9 2 2 2h10c1.1 0 2-.9 2-2V3c0-1.1-.9-1.99-2-1.99zM17 19H7V5h10v14z"/></svg>
+          <span>Mobile APK &rarr;</span>
+        </a>
+      </div>
+    </div>
   </div>
 
   <!-- Project 2: LIGTAS SUNDO -->
-  <div class="detail-block">
-    <h2>Ligtas Sundo &mdash; Student Safety &amp; Pickup System</h2>
-    <p>A smart student dismissal and pickup monitoring solution developed to streamline campus safety, notification alerts, and secure student-guardian verification.</p>
-    <p><strong>My Role:</strong> Project Manager & Documentation for Papers</p>
-    <p><strong>Key Contributions:</strong></p>
-    <p>&bull; Oversaw overall project management, sprint goals, and team deliverables.<br>
-    &bull; Led the technical documentation, system specifications, and user workflow mapping.<br>
-    &bull; Designed system process flowcharts and hardware-software interfacing architectures.<br>
-    &bull; Supported testing and validation to ensure reliable communication and device performance.</p>
+  <div class="project-showcase-card">
+    <div class="project-header-row">
+      <span class="project-tag">Third Year Project</span>
+      <h2 class="project-heading">Ligtas Sundo: QR &amp; RFID Student Dismissal System</h2>
+    </div>
+
+    <!-- Images Grid -->
+    <div class="project-images-grid">
+      <div class="project-img-box">
+        <img src="pictures/ligtas-sundo1.png" alt="Ligtas Sundo Hardware Prototype" loading="lazy">
+        <span>Hardware &amp; RFID Scanner Setup</span>
+      </div>
+      <div class="project-img-box">
+        <img src="pictures/ligtas-sundo2.png" alt="Ligtas Sundo Application Interface" loading="lazy">
+        <span>Mobile App &amp; Notification Portal</span>
+      </div>
+    </div>
+
+    <!-- Description & Justine's Roles -->
+    <div class="project-info-body">
+      <p class="project-desc">
+        A technology-assisted student dismissal management system built for Noveca Day Care Center. It pairs RFID student attendance tracking with QR code scanning for authorized guardian verification, sending automated SMS notifications to parents for safe, verified pickups.
+      </p>
+
+      <div class="project-meta-pill">
+        <strong>My Roles:</strong> Documentation for Papers &amp; Hardware Support
+      </div>
+
+      <div class="project-details-grid">
+        <div class="project-detail-col">
+          <h3>Documentation &amp; Analysis</h3>
+          <ul>
+            <li>Led the technical documentation, system specifications, and workflow procedures.</li>
+            <li>Designed process flowcharts mapping student check-in, pickup authorization, and alert logs.</li>
+            <li>Documented data flows and requirements to ensure user-friendly day care operation.</li>
+          </ul>
+        </div>
+        <div class="project-detail-col">
+          <h3>Hardware &amp; Testing Support</h3>
+          <ul>
+            <li>Assisted in setting up and configuring the 13.56 MHz USB RFID reader and student ID badges.</li>
+            <li>Conducted on-site testing for QR scanning response times and teacher workstation compatibility.</li>
+            <li>Assisted in validating real-time SMS trigger flows during student dismissal simulations.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="project-tech-badges">
+        <span class="tech-badge">RFID 13.56MHz</span>
+        <span class="tech-badge">QR Code Verification</span>
+        <span class="tech-badge">Node.js &amp; Express</span>
+        <span class="tech-badge">Flutter Web</span>
+        <span class="tech-badge">MongoDB Atlas</span>
+        <span class="tech-badge">iProg SMS Gateway</span>
+      </div>
+
+      <div class="project-note">
+        <strong>Note:</strong> Built and demonstrated as a local on-site prototype for Noveca Day Care Center. Code repositories and walkthroughs are available upon request via the <a href="#contact">Contact</a> section.
+      </div>
+    </div>
   </div>
 </section>
         <section id="certifications" data-section data-label="Learning" role="tabpanel" aria-labelledby="gallery-certifications" hidden>
@@ -306,13 +427,22 @@
   <span class="visual-caption"><span>Hardware &amp; Tools</span><span aria-hidden="true">&#x2197;</span></span>
 </button>
       <div id="about-portrait" class="gallery-card portrait-visual"><button id="gallery-about" class="portrait-trigger" data-gallery-section="about" role="tab" aria-controls="about" aria-selected="true" tabindex="0"><img class="portrait-image" src="pictures/jjomoc.jpeg" alt="Justine Jomoc" fetchpriority="high"><span class="portrait-caption">Justine Jomoc</span></button><div id="about-photo-overlay" class="portrait-overlay" role="group" aria-label="About Justine and contact links" data-carousel-interactive><p class="portrait-eyebrow">FOURTH-YEAR BSIT STUDENT</p><h2 class="name-script overlay-name-script">Justine Jomoc</h2><p class="portrait-summary">4th-year BSIT student eager to learn, contribute, and gain hands-on experience in the IT industry.</p><p class="portrait-contact-label">You may contact me:</p><div class="social-links portrait-social-links" data-social-links="portrait" aria-label="Justine’s social profiles"></div></div></div>
-      <button id="gallery-projects" class="gallery-card project-visual" data-gallery-section="projects" role="tab" aria-controls="projects" aria-selected="false" tabindex="-1"><span class="visual-overline">PROJECTS / SELECTED WORK</span><span class="project-wireframe" aria-hidden="true"><span class="wire-toolbar"><i></i><i></i><i></i></span><span class="wire-sidebar"></span><span class="wire-content"><i></i><i></i><i></i><b>↗</b></span></span><span class="project-placeholder-label">ALERTO &middot;<br>Ligtas Sundo</span><span class="visual-caption"><span>Project evidence to add</span><span aria-hidden="true">↗</span></span></button>
+      <button id="gallery-projects" class="gallery-card project-visual" data-gallery-section="projects" role="tab" aria-controls="projects" aria-selected="false" tabindex="-1">
+        <span class="visual-overline">PROJECTS / SELECTED WORK</span>
+        <span class="project-carousel-preview">
+          <img src="pictures/alerto.png" class="preview-thumb thumb-main" alt="ALERTO Hardware">
+          <img src="pictures/alerto-app.png" class="preview-thumb thumb-sub" alt="ALERTO App">
+          <img src="pictures/ligtas-sundo1.png" class="preview-thumb thumb-tertiary" alt="Ligtas Sundo">
+        </span>
+        <span class="project-placeholder-label">ALERTO &middot;<br>Ligtas Sundo</span>
+        <span class="visual-caption"><span>View project showcase</span><span aria-hidden="true">&#x2197;</span></span>
+      </button>
       <button id="gallery-certifications" class="gallery-card learning-visual" data-gallery-section="certifications" role="tab" aria-controls="certifications" aria-selected="false" tabindex="-1"><span class="visual-overline">CERTIFICATIONS & COURSES</span><span class="certificate-stack"><img src="certificates/cyber_sec_badge.png" alt="Cybersecurity badge"><img src="pictures/microsoft.jpg" alt="Microsoft Word certificate"><img src="pictures/cert java.png" alt="Java Foundation certificate"></span><span class="visual-caption"><span>Always learning.</span><span aria-hidden="true">↗</span></span></button>
       <button id="gallery-awards" class="gallery-card awards-visual" data-gallery-section="awards" role="tab" aria-controls="awards" aria-selected="false" tabindex="-1">
   <span class="visual-overline">AWARDS &amp; HONORS</span>
   <span class="certificate-stack">
     <img src="certificates/dl_1st_sem_2025_2026.jpg" alt="Dean's Lister">
-    <img src="certificates/dl_2023_2024.jpg" alt="Dean's Lister">
+    <img src="certificates/dbp_cert.jpg" alt="DBP Certificate">
     <img src="certificates/dominican_sing_cert.jpg" alt="Dominican Sing">
   </span>
   <span class="visual-caption"><span>Honors &amp; achievements</span><span aria-hidden="true">&#x2197;</span></span>
