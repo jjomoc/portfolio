@@ -1594,3 +1594,77 @@ html[data-theme="dark"] .breadcrumb > span {
   width: 100% !important;
   max-height: 320px !important;
 }
+
+/* ============================================================
+   PROJECTS 3D CAROUSEL CARD: SAME PROPORTIONS AS AWARDS / LEADERSHIP
+   ============================================================ */
+.project-visual .certificate-stack {
+  top: 25% !important;
+  left: 12% !important;
+  right: 12% !important;
+  height: 52% !important;
+  display: block !important;
+  position: absolute !important;
+}
+
+.project-visual .certificate-stack img {
+  border-radius: 12px !important;
+  background-color: #1a1a1a !important;
+  object-fit: cover !important;
+  object-position: center !important;
+  width: 100% !important;
+  height: 100% !important;
+  padding: 0 !important;
+  border: 1.5px solid rgba(255, 206, 216, 0.45) !important;
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.4) !important;
+  position: absolute !important;
+  inset: 0 !important;
+}
+
+.project-visual .certificate-stack img:first-child {
+  transform: rotate(-10deg) translateY(-14px) !important;
+  z-index: 1 !important;
+}
+
+.project-visual .certificate-stack img:nth-child(2) {
+  transform: rotate(7deg) translateY(-4px) !important;
+  z-index: 2 !important;
+}
+
+.project-visual .certificate-stack img:nth-child(3) {
+  transform: rotate(-2deg) translateY(10px) !important;
+  z-index: 3 !important;
+}
+
+/* Hide any leftover project text label on the 3D card */
+.project-visual .project-placeholder-label {
+  display: none !important;
+}
+
+/* Refined, elegant soft transparency for carousel cards (leaving About solid) */
+.gallery-card:not(.portrait-visual) {
+  opacity: 0.88 !important;
+  backdrop-filter: blur(14px) !important;
+  -webkit-backdrop-filter: blur(14px) !important;
+}
+
+[data-theme="light"] .gallery-card:not(.portrait-visual) {
+  background: rgba(255, 215, 225, 0.75) !important;
+  border: 1.5px solid rgba(255, 255, 255, 0.65) !important;
+  box-shadow: 0 16px 36px rgba(80, 40, 60, 0.15) !important;
+}
+
+[data-theme="dark"] .gallery-card:not(.portrait-visual) {
+  background: rgba(43, 27, 36, 0.80) !important;
+  border: 1.5px solid rgba(255, 206, 216, 0.22) !important;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.5) !important;
+}
+
+/* Ensure About portrait stays completely solid / opaque */
+.portrait-visual,
+.portrait-visual .portrait-image,
+#about-portrait {
+  opacity: 1 !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+}
