@@ -1668,3 +1668,185 @@ html[data-theme="dark"] .breadcrumb > span {
   backdrop-filter: none !important;
   -webkit-backdrop-filter: none !important;
 }
+/* ============================================================
+   LIGHT MODE & CARD CONTRAST FIXES: FOR HIRE & TOOLS SECTIONS
+   ============================================================ */
+
+/* 1. For Hire Badge Card in Left Rail - Light Mode */
+[data-theme="light"] .hire-badge-card {
+  background: #ffffff !important;
+  border: 1.5px solid #d99aaf !important;
+  box-shadow: 0 14px 34px rgba(66, 35, 51, 0.12) !important;
+}
+
+[data-theme="light"] .hire-badge-card .hire-name-script {
+  color: #3b1928 !important;
+  text-shadow: none !important;
+}
+
+[data-theme="light"] .hire-badge-text .role-tag {
+  color: #9c3157 !important;
+  font-weight: 700 !important;
+}
+
+[data-theme="light"] .hire-badge-text .school-tag {
+  color: #583344 !important;
+  font-weight: 500 !important;
+}
+
+[data-theme="light"] .status-pill {
+  background: #fdf2f4 !important;
+  border-color: #d99aaf !important;
+  color: #2b1720 !important;
+  font-weight: 600 !important;
+}
+
+/* 2. Tech Stack Cards in Left Rail - Light Mode */
+[data-theme="light"] .tech-category {
+  background: rgba(255, 255, 255, 0.5) !important;
+  border-color: #d99aaf !important;
+}
+
+[data-theme="light"] .tech-card {
+  background: #ffffff !important;
+  border: 1.5px solid #d99aaf !important;
+  box-shadow: 0 4px 12px rgba(66, 35, 51, 0.08) !important;
+}
+
+[data-theme="light"] .tech-card .tech-name {
+  color: #2b1720 !important;
+  font-weight: 700 !important;
+  font-size: 14.5px !important;
+}
+
+[data-theme="light"] .tech-card .tech-role {
+  color: #633b4d !important;
+  font-weight: 600 !important;
+  font-size: 12px !important;
+}
+
+[data-theme="light"] .tech-category-title .category-name {
+  color: #3b1928 !important;
+}
+
+[data-theme="light"] .tech-category-desc {
+  color: #583344 !important;
+}
+
+/* 3. 3D Carousel Cards in Light Mode */
+
+/* Tools 3D Card (gallery-stack) */
+[data-theme="light"] .tools-visual {
+  background: rgba(255, 225, 233, 0.85) !important;
+  color: #3b1928 !important;
+  border: 1.5px solid rgba(255, 255, 255, 0.8) !important;
+  box-shadow: 0 16px 36px rgba(80, 40, 60, 0.16) !important;
+}
+
+[data-theme="light"] .tools-visual .visual-overline {
+  color: #714757 !important;
+}
+
+[data-theme="light"] .tools-visual .visual-caption {
+  color: #3b1928 !important;
+}
+
+.tool-wall small {
+  font-size: 9px !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.02em !important;
+  margin-top: 4px !important;
+}
+
+[data-theme="light"] .tool-wall small {
+  color: #3b1928 !important;
+}
+
+[data-theme="dark"] .tool-wall small {
+  color: #ffffff !important;
+}
+
+.tool-wall img {
+  width: 36px !important;
+  height: 36px !important;
+  filter: drop-shadow(0 3px 6px rgba(0, 0, 0, 0.2)) !important;
+}
+
+/* For Hire 3D Card (gallery-contact) */
+[data-theme="light"] .contact-visual {
+  background: rgba(255, 220, 230, 0.88) !important;
+  color: #3b1928 !important;
+  border: 1.5px solid rgba(255, 255, 255, 0.8) !important;
+  box-shadow: 0 16px 36px rgba(80, 40, 60, 0.18) !important;
+}
+
+[data-theme="light"] .contact-visual .visual-overline {
+  color: #9c3157 !important;
+}
+
+[data-theme="light"] .contact-visual .contact-caption {
+  color: #3b1928 !important;
+}
+
+[data-theme="light"] .contact-visual .visual-caption {
+  color: #3b1928 !important;
+}
+
+/* Contact 3D Card Photo Badge */
+.contact-preview-badge {
+  position: absolute;
+  top: 24%;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 82%;
+  padding: 14px 10px 12px;
+  background: rgba(255, 255, 255, 0.14);
+  border: 1px solid rgba(255, 206, 216, 0.4);
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(8px);
+}
+
+[data-theme="light"] .contact-preview-badge {
+  background: rgba(255, 255, 255, 0.75);
+  border-color: rgba(217, 154, 175, 0.6);
+  box-shadow: 0 8px 20px rgba(66, 35, 51, 0.12);
+}
+
+.contact-card-avatar {
+  width: 62px !important;
+  height: 62px !important;
+  border-radius: 50% !important;
+  object-fit: cover !important;
+  border: 2.5px solid #ffced8 !important;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.3) !important;
+  margin-bottom: 6px !important;
+}
+
+.contact-card-name {
+  font-family: 'Better Grade', Georgia, cursive, serif !important;
+  font-size: 38px !important;
+  line-height: 1 !important;
+  color: #ffffff !important;
+  margin: 2px 0 3px !important;
+}
+
+[data-theme="light"] .contact-card-name {
+  color: #3b1928 !important;
+}
+
+.contact-card-sub {
+  font-size: 10px !important;
+  font-weight: 600 !important;
+  color: #ffced8 !important;
+  letter-spacing: 0.04em !important;
+  white-space: nowrap !important;
+}
+
+[data-theme="light"] .contact-card-sub {
+  color: #714757 !important;
+}
