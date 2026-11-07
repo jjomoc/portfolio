@@ -1515,3 +1515,82 @@ html[data-theme="dark"] .breadcrumb > span {
   transform: rotate(-2deg);
   opacity: 0.85;
 }
+
+
+/* ============================================================
+   ENHANCED 3D CAROUSEL: SOFT GLASS/TRANSPARENCY & ENLARGED PROJECT MEDIA
+   ============================================================ */
+
+/* 1. Subtle soft transparency across carousel 3D cards, except About portrait */
+.gallery-card:not(.portrait-visual) {
+  opacity: 0.9 !important;
+  backdrop-filter: blur(12px) !important;
+  -webkit-backdrop-filter: blur(12px) !important;
+}
+
+[data-theme="light"] .gallery-card:not(.portrait-visual) {
+  background: rgba(255, 206, 216, 0.72) !important;
+  border: 1px solid rgba(255, 255, 255, 0.5) !important;
+  box-shadow: 0 14px 34px rgba(66, 35, 51, 0.12) !important;
+}
+
+[data-theme="dark"] .gallery-card:not(.portrait-visual) {
+  background: rgba(47, 32, 41, 0.78) !important;
+  border: 1px solid rgba(255, 206, 216, 0.18) !important;
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.45) !important;
+}
+
+/* Ensure About portrait stays completely solid / opaque */
+.portrait-visual {
+  opacity: 1 !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+}
+
+.portrait-visual .portrait-image {
+  opacity: 1 !important;
+}
+
+/* 2. Enlarged Project Images in Left Rail Showcase */
+.project-images-subgrid,
+.project-images-grid {
+  display: grid !important;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)) !important;
+  gap: 14px !important;
+  margin-bottom: 20px !important;
+}
+
+.project-img-box {
+  border-radius: 14px !important;
+  overflow: hidden !important;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25) !important;
+}
+
+.project-img-box img {
+  width: 100% !important;
+  height: 190px !important;
+  object-fit: cover !important;
+  transition: transform 0.3s ease !important;
+}
+
+.project-img-box:hover img {
+  transform: scale(1.04) !important;
+}
+
+.project-img-box span {
+  font-size: 12.5px !important;
+  font-weight: 600 !important;
+  padding: 8px 6px !important;
+  display: block !important;
+}
+
+/* Enlarged Project Video */
+.project-video-wrapper {
+  border-radius: 14px !important;
+  margin-bottom: 16px !important;
+}
+
+.project-video {
+  width: 100% !important;
+  max-height: 320px !important;
+}
