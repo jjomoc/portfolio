@@ -270,41 +270,45 @@
 
 .tech-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(105px, 1fr));
-  gap: 12px;
+  grid-template-columns: repeat(auto-fill, minmax(95px, 1fr));
+  gap: 16px 10px;
 }
 
 .tech-card {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   text-align: center;
-  padding: 14px 8px 12px;
-  background: rgba(255, 255, 255, 0.03);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  border-radius: 12px;
-  transition: transform 0.25s ease, border-color 0.25s ease, background 0.25s ease, box-shadow 0.25s ease;
+  padding: 8px 4px 6px;
+  background: transparent !important;
+  border: none !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  backdrop-filter: none !important;
+  transition: transform 0.25s ease;
 }
 
 .tech-card:hover {
   transform: translateY(-4px);
-  background: rgba(255, 206, 216, 0.08);
-  border-color: rgba(255, 105, 180, 0.5);
-  box-shadow: 0 8px 20px rgba(255, 105, 180, 0.2);
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
 }
 
 .tech-card img {
-  width: 44px;
-  height: 44px;
+  width: 48px;
+  height: 48px;
   object-fit: contain;
   margin-bottom: 8px;
-  transition: transform 0.25s ease;
+  transition: transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
+  filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.12));
   flex-shrink: 0;
 }
 
 .tech-card:hover img {
-  transform: scale(1.1);
+  transform: scale(1.15) translateY(-2px);
+  filter: drop-shadow(0 8px 16px rgba(255, 105, 180, 0.35));
 }
 
 .tech-card .tech-name {
@@ -313,6 +317,9 @@
   color: var(--ink, #ffffff);
   line-height: 1.25;
   display: block;
+  word-break: break-word;
+  overflow-wrap: break-word;
+  max-width: 100%;
 }
 
 .tech-card .tech-role {
@@ -320,8 +327,11 @@
   font-weight: 500;
   color: var(--muted, #9ca3af);
   margin-top: 3px;
-  line-height: 1.2;
+  line-height: 1.25;
   display: block;
+  word-break: break-word;
+  overflow-wrap: break-word;
+  max-width: 100%;
 }
 
 /* Adjust readability of body paragraphs in rail */
@@ -636,18 +646,24 @@ body {
 .tech-category-title .category-name {
   font-size: 16.5px !important;
   font-weight: 700 !important;
-  white-space: nowrap !important;
+  white-space: normal !important;
 }
 
 .tech-card .tech-name {
-  font-size: 14px !important;
+  font-size: 13.5px !important;
   font-weight: 700 !important;
-  white-space: nowrap !important;
+  white-space: normal !important;
+  word-break: break-word !important;
+  overflow-wrap: break-word !important;
+  hyphens: auto !important;
 }
 
 .tech-card .tech-role {
-  font-size: 12px !important;
-  white-space: nowrap !important;
+  font-size: 11.5px !important;
+  white-space: normal !important;
+  word-break: break-word !important;
+  overflow-wrap: break-word !important;
+  hyphens: auto !important;
 }
 
 /* For hire card single line tags */
@@ -1708,28 +1724,28 @@ html[data-theme="dark"] .breadcrumb > span {
 }
 
 [data-theme="light"] .tech-card {
-  background: rgba(255, 255, 255, 0.45) !important;
-  border: 1px solid rgba(217, 154, 175, 0.4) !important;
-  box-shadow: 0 2px 8px rgba(66, 35, 51, 0.05) !important;
-  backdrop-filter: blur(8px) !important;
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  backdrop-filter: none !important;
 }
 
 [data-theme="light"] .tech-card:hover {
-  background: rgba(255, 255, 255, 0.85) !important;
-  border-color: #ff69b4 !important;
-  box-shadow: 0 8px 20px rgba(255, 105, 180, 0.2) !important;
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
 }
 
 [data-theme="light"] .tech-card .tech-name {
   color: #2b1720 !important;
   font-weight: 700 !important;
-  font-size: 14.5px !important;
+  font-size: 13.5px !important;
 }
 
 [data-theme="light"] .tech-card .tech-role {
   color: #633b4d !important;
   font-weight: 600 !important;
-  font-size: 12px !important;
+  font-size: 11.5px !important;
 }
 
 [data-theme="light"] .tech-category-title .category-name {
@@ -1999,4 +2015,133 @@ html[data-theme="dark"] .breadcrumb > span {
 
 [data-theme="dark"] #gallery-position {
   color: #ffffff !important;
+}
+
+/* ============================================================
+   AESTHETIC BOTTOM SOCIAL SECTION FOR HIRE PANEL
+   ============================================================ */
+.contact-bottom-social {
+  display: flex !important;
+  flex-direction: row !important;
+  flex-wrap: nowrap !important;
+  justify-content: center !important;
+  gap: 12px !important;
+  margin-top: 14px !important;
+  margin-bottom: 24px !important;
+  width: 100% !important;
+}
+
+.contact-bottom-social > a {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  padding: 8px 14px !important;
+  border-radius: 9999px !important;
+  font-size: 12px !important;
+  font-weight: 600 !important;
+  text-decoration: none !important;
+  transition: all 0.25s ease !important;
+  white-space: nowrap !important;
+}
+
+.contact-bottom-social > a svg {
+  width: 15px !important;
+  height: 15px !important;
+}
+
+[data-theme="light"] .contact-bottom-social > a {
+  background: rgba(255, 255, 255, 0.75) !important;
+  border: 1px solid #d99aaf !important;
+  color: #3b1928 !important;
+  box-shadow: 0 2px 8px rgba(66, 35, 51, 0.06) !important;
+}
+
+[data-theme="light"] .contact-bottom-social > a:hover {
+  background: #ffffff !important;
+  border-color: #ff69b4 !important;
+  color: #ff69b4 !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 4px 14px rgba(255, 105, 180, 0.25) !important;
+}
+
+[data-theme="dark"] .contact-bottom-social > a {
+  background: rgba(255, 255, 255, 0.06) !important;
+  border: 1px solid rgba(255, 206, 216, 0.2) !important;
+  color: #ffffff !important;
+}
+
+[data-theme="dark"] .contact-bottom-social > a:hover {
+  background: rgba(255, 105, 180, 0.18) !important;
+  border-color: #ff69b4 !important;
+  color: #ffced8 !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 4px 14px rgba(255, 105, 180, 0.3) !important;
+}
+
+.contact-subhead {
+  text-align: center !important;
+  margin-top: 24px !important;
+  margin-bottom: 6px !important;
+}
+
+/* ============================================================
+   RESPONSIVE / MOBILE ENHANCEMENTS (FOR HIRE & TOOLS CARDS)
+   ============================================================ */
+@media (max-width: 900px) {
+  .contact-preview-badge {
+    top: 14% !important;
+    width: 90% !important;
+    padding: 10px 8px !important;
+  }
+
+  .contact-card-avatar {
+    width: 52px !important;
+    height: 52px !important;
+  }
+
+  .contact-card-name {
+    font-size: 32px !important;
+  }
+
+  .contact-card-sub {
+    font-size: 9.5px !important;
+    margin-bottom: 6px !important;
+  }
+
+  .contact-card-tag {
+    font-size: 8.5px !important;
+    padding: 2px 8px !important;
+  }
+
+  .contact-visual .contact-caption {
+    bottom: 34px !important;
+    font-size: 10px !important;
+    letter-spacing: 0.05em !important;
+  }
+
+  .tool-wall {
+    bottom: 46px !important;
+    gap: 12px 6px !important;
+    left: 10px !important;
+    right: 10px !important;
+  }
+
+  .tool-wall img {
+    width: 28px !important;
+    height: 28px !important;
+  }
+
+  .tool-wall small {
+    font-size: 7.5px !important;
+  }
+
+  .contact-bottom-social {
+    flex-wrap: wrap !important;
+    gap: 8px !important;
+  }
+
+  .tech-grid {
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 12px 6px !important;
+  }
 }
