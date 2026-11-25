@@ -2031,14 +2031,19 @@ html[data-theme="dark"] .breadcrumb > span {
    AESTHETIC BOTTOM SOCIAL SECTION FOR HIRE PANEL
    ============================================================ */
 .contact-bottom-social {
-  display: flex !important;
-  flex-direction: row !important;
-  flex-wrap: wrap !important;
-  justify-content: flex-start !important;
+  display: grid !important;
+  grid-template-columns: repeat(2, 1fr) !important;
   gap: 10px !important;
   margin-top: 14px !important;
   margin-bottom: 24px !important;
   width: 100% !important;
+  box-sizing: border-box !important;
+}
+
+.contact-bottom-social > a {
+  width: 100% !important;
+  justify-content: center !important;
+  box-sizing: border-box !important;
 }
 
 .contact-bottom-social > a {
@@ -2158,12 +2163,54 @@ html[data-theme="dark"] .breadcrumb > span {
   }
 
   .contact-bottom-social {
-    flex-wrap: wrap !important;
-    gap: 8px !important;
-  }
+  display: grid !important;
+  grid-template-columns: repeat(2, 1fr) !important;
+  gap: 10px !important;
+  margin-top: 14px !important;
+  margin-bottom: 24px !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
+}
+
+.contact-bottom-social > a {
+  width: 100% !important;
+  justify-content: center !important;
+  box-sizing: border-box !important;
+}
 
   .tech-grid {
     grid-template-columns: repeat(3, 1fr) !important;
     gap: 12px 6px !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .contact-visual .contact-preview-badge {
+    top: 15% !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    width: 86% !important;
+    padding: 12px 10px !important;
+    box-sizing: border-box !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+    gap: 4px !important;
+  }
+
+  .contact-visual .contact-card-avatar-wrap {
+    margin: 0 auto 4px !important;
+  }
+
+  .contact-visual .contact-card-name,
+  .contact-visual .contact-card-sub,
+  .contact-visual .contact-card-tag {
+    width: 100% !important;
+    text-align: center !important;
+    display: block !important;
+    margin: 0 !important;
+    line-height: 1.35 !important;
   }
 }
