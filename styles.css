@@ -2214,3 +2214,60 @@ html[data-theme="dark"] .breadcrumb > span {
     line-height: 1.35 !important;
   }
 }
+/* Brighten cylinder card fonts slightly in Dark Mode */
+[data-theme="dark"] .gallery-card .visual-overline {
+  color: rgba(255, 224, 234, 0.9) !important;
+}
+
+[data-theme="dark"] .gallery-card .visual-caption {
+  color: #ffffff !important;
+}
+
+[data-theme="dark"] .contact-visual .contact-card-sub,
+[data-theme="dark"] .contact-visual .contact-caption {
+  color: rgba(255, 230, 238, 0.92) !important;
+}
+
+/* Fix For Hire cylinder card text wrapping & alignment on mobile */
+@media (max-width: 768px) {
+  .contact-visual {
+    padding: 14px 10px !important;
+    overflow: hidden !important;
+  }
+
+  .contact-visual .visual-overline,
+  .contact-visual .contact-caption,
+  .contact-visual .visual-caption {
+    white-space: normal !important;
+    word-break: break-word !important;
+    text-align: center !important;
+    max-width: 100% !important;
+    font-size: 9.5px !important;
+    line-height: 1.3 !important;
+  }
+
+  .contact-visual .contact-preview-badge {
+    width: 90% !important;
+    max-width: 90% !important;
+    padding: 10px 8px !important;
+    overflow: hidden !important;
+  }
+
+  .contact-visual .contact-card-name {
+    font-size: 18px !important;
+    white-space: normal !important;
+  }
+
+  .contact-visual .contact-card-sub {
+    font-size: 10px !important;
+    white-space: normal !important;
+    word-break: break-word !important;
+  }
+
+  .contact-visual .contact-card-tag {
+    font-size: 9.5px !important;
+    white-space: normal !important;
+    word-break: break-word !important;
+    padding: 3px 8px !important;
+  }
+}
