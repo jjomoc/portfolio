@@ -1759,7 +1759,7 @@ html[data-theme="dark"] .breadcrumb > span {
 /* 3. 3D Carousel Cards in Light Mode */
 
 /* Tools 3D Card (gallery-stack) */
-[data-theme="light"] .tools-visual {
+[data-theme="light"] .gallery-card.tools-visual {
   background: transparent !important;
   backdrop-filter: none !important;
   -webkit-backdrop-filter: none !important;
@@ -1768,7 +1768,7 @@ html[data-theme="dark"] .breadcrumb > span {
   box-shadow: none !important;
 }
 
-[data-theme="dark"] .tools-visual {
+[data-theme="dark"] .gallery-card.tools-visual {
   background: transparent !important;
   backdrop-filter: none !important;
   -webkit-backdrop-filter: none !important;
@@ -2033,9 +2033,9 @@ html[data-theme="dark"] .breadcrumb > span {
 .contact-bottom-social {
   display: flex !important;
   flex-direction: row !important;
-  flex-wrap: nowrap !important;
-  justify-content: center !important;
-  gap: 12px !important;
+  flex-wrap: wrap !important;
+  justify-content: flex-start !important;
+  gap: 10px !important;
   margin-top: 14px !important;
   margin-bottom: 24px !important;
   width: 100% !important;
@@ -2098,10 +2098,22 @@ html[data-theme="dark"] .breadcrumb > span {
    RESPONSIVE / MOBILE ENHANCEMENTS (FOR HIRE & TOOLS CARDS)
    ============================================================ */
 @media (max-width: 900px) {
-  .contact-preview-badge {
+    .contact-preview-badge {
     top: 14% !important;
-    width: 90% !important;
+    width: 88% !important;
     padding: 10px 8px !important;
+    box-sizing: border-box !important;
+    align-items: center !important;
+    text-align: center !important;
+  }
+
+  .contact-card-name,
+  .contact-card-sub,
+  .contact-card-tag {
+    width: 100% !important;
+    text-align: center !important;
+    display: block !important;
+    line-height: 1.3 !important;
   }
 
   .contact-card-avatar {
