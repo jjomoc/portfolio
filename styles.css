@@ -2271,3 +2271,19 @@ html[data-theme="dark"] .breadcrumb > span {
     padding: 3px 8px !important;
   }
 }
+/* Extra-bright readable fonts on all cylinder cards in Dark Mode */
+[data-theme="dark"] .gallery-card .visual-overline,
+[data-theme="dark"] .gallery-card .visual-caption,
+[data-theme="dark"] .gallery-card .visual-caption span,
+[data-theme="dark"] .gallery-card .tool-wall small,
+[data-theme="dark"] .contact-visual .contact-card-name,
+[data-theme="dark"] .contact-visual .contact-card-sub,
+[data-theme="dark"] .contact-visual .contact-card-tag,
+[data-theme="dark"] .contact-visual .contact-caption {
+  color: #ffffff !important;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.45) !important;
+}
+
+[data-theme="dark"] .gallery-card .visual-overline {
+  color: #ffe2ec !important;
+}
